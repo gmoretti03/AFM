@@ -1,0 +1,222 @@
+{
+ "anomaly": {
+  "auc": {
+   "IsolationForest": 0.8764912280701754,
+   "Robust Mahalanobis": 0.872280701754386
+  },
+  "efficiency": {
+   "no_contact": {
+    "n": 10.0,
+    "failed_fit": 10.0,
+    "IsolationForest": 1.0,
+    "Robust Mahalanobis": 1.0
+   },
+   "saturation": {
+    "n": 10.0,
+    "failed_fit": 0.0,
+    "IsolationForest": 0.8,
+    "Robust Mahalanobis": 0.6
+   },
+   "huge_noise": {
+    "n": 10.0,
+    "failed_fit": 10.0,
+    "IsolationForest": 1.0,
+    "Robust Mahalanobis": 1.0
+   },
+   "jump": {
+    "n": 10.0,
+    "failed_fit": 0.0,
+    "IsolationForest": 0.9,
+    "Robust Mahalanobis": 0.8
+   },
+   "wrong_slope": {
+    "n": 10.0,
+    "failed_fit": 0.0,
+    "IsolationForest": 0.1,
+    "Robust Mahalanobis": 0.3
+   }
+  },
+  "fpr_synthetic_good": {
+   "IsolationForest": 0.05473684210526316,
+   "Robust Mahalanobis": 0.05263157894736842
+  }
+ },
+ "real_flagged_both": [
+  "cito-0013.jpk-force",
+  "cito-0082.jpk-force",
+  "nucleo-0034.jpk-force",
+  "nucleo-0046.jpk-force",
+  "nucleo-0050.jpk-force",
+  "nucleo-0065.jpk-force",
+  "nucleo-0066.jpk-force",
+  "nucleo-0073.jpk-force"
+ ],
+ "classification": [
+  {
+   "line": "MCF7R",
+   "model": "logistic",
+   "AUC": 0.9512,
+   "sd_repetitions": 0.0024,
+   "brier": 0.0908
+  },
+  {
+   "line": "MCF7R",
+   "model": "random forest",
+   "AUC": 0.9294,
+   "sd_repetitions": 0.0053,
+   "brier": 0.1045
+  },
+  {
+   "line": "MCF7R",
+   "model": "gradient boosting",
+   "AUC": 0.9043,
+   "sd_repetitions": 0.0091,
+   "brier": 0.1401
+  },
+  {
+   "line": "T47DR",
+   "model": "logistic",
+   "AUC": 0.6263,
+   "sd_repetitions": 0.0126,
+   "brier": 0.2299
+  },
+  {
+   "line": "T47DR",
+   "model": "random forest",
+   "AUC": 0.6429,
+   "sd_repetitions": 0.0275,
+   "brier": 0.2348
+  },
+  {
+   "line": "T47DR",
+   "model": "gradient boosting",
+   "AUC": 0.6079,
+   "sd_repetitions": 0.0218,
+   "brier": 0.2591
+  }
+ ],
+ "permutation": {
+  "MCF7R": {
+   "AUC": 0.9512,
+   "AUC_null_mean": 0.4668,
+   "p_perm": 0.005,
+   "only_logA": 0.9061,
+   "only_max_indentation_um": 0.9395,
+   "only_adhesion_nN": 0.7397,
+   "only_adhesion_work_nN_um": 0.7474
+  },
+  "T47DR": {
+   "AUC": 0.6263,
+   "AUC_null_mean": 0.4839,
+   "p_perm": 0.0249,
+   "only_logA": 0.6371,
+   "only_max_indentation_um": 0.6437,
+   "only_adhesion_nN": 0.585,
+   "only_adhesion_work_nN_um": 0.6008
+  }
+ },
+ "transfer": [
+  {
+   "train": "MCF7R",
+   "test": "T47DR",
+   "model": "logistic",
+   "AUC": 0.6584,
+   "AUC_logA_centred": 0.6584
+  },
+  {
+   "train": "MCF7R",
+   "test": "T47DR",
+   "model": "random forest",
+   "AUC": 0.6781,
+   "AUC_logA_centred": 0.6672
+  },
+  {
+   "train": "T47DR",
+   "test": "MCF7R",
+   "model": "logistic",
+   "AUC": 0.9552,
+   "AUC_logA_centred": 0.9552
+  },
+  {
+   "train": "T47DR",
+   "test": "MCF7R",
+   "model": "random forest",
+   "AUC": 0.8355,
+   "AUC_logA_centred": 0.8164
+  }
+ ],
+ "mixture": {
+  "MCF7R cito": {
+   "n": 55,
+   "dBIC_2_vs_1": 9.806475559154705,
+   "q_LRT": 2.215523996542709,
+   "p_bootstrap": 0.40298507462686567,
+   "weights": [
+    0.52,
+    0.48
+   ],
+   "means": [
+    -0.28,
+    0.42
+   ],
+   "sd": [
+    0.35,
+    0.28
+   ]
+  },
+  "MCF7R nucleo": {
+   "n": 60,
+   "dBIC_2_vs_1": 5.847213500666243,
+   "q_LRT": 6.435820186000061,
+   "p_bootstrap": 0.07462686567164178,
+   "weights": [
+    0.29,
+    0.71
+   ],
+   "means": [
+    -0.36,
+    -0.92
+   ],
+   "sd": [
+    0.23,
+    0.2
+   ]
+  },
+  "T47DR cito": {
+   "n": 59,
+   "dBIC_2_vs_1": 6.0023539402395585,
+   "q_LRT": 6.23025839147761,
+   "p_bootstrap": 0.0945273631840796,
+   "weights": [
+    0.47,
+    0.53
+   ],
+   "means": [
+    -0.55,
+    0.29
+   ],
+   "sd": [
+    0.27,
+    0.29
+   ]
+  },
+  "T47DR nucleo": {
+   "n": 83,
+   "dBIC_2_vs_1": -0.49809371341541464,
+   "q_LRT": 13.754615536805202,
+   "p_bootstrap": 0.009950248756218905,
+   "weights": [
+    0.71,
+    0.29
+   ],
+   "means": [
+    -0.64,
+    0.35
+   ],
+   "sd": [
+    0.37,
+    0.6
+   ]
+  }
+ }
+}

@@ -1,0 +1,21 @@
+# Ambiente usato per tutti i risultati (macOS arm64, 2026-10).
+#   conda env create -f environment.yml && conda activate afm
+#   python -m ipykernel install --user --name afm     # i notebook usano il kernel "afm"
+name: afm
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.13
+  - numpy=2.4.6
+  - scipy=1.18.0
+  - pandas=3.0.3
+  - matplotlib=3.11.0
+  - iminuit=2.32.0
+  - emcee=3.1.6
+  - corner=2.3.0
+  - scikit-learn=1.9.0
+  - jupyter_core
+  - nbclient=0.11.0
+  - nbformat=5.10.4
+  - ipykernel=7.3.0
+  - pip

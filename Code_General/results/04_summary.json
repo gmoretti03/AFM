@@ -1,0 +1,229 @@
+{
+ "mcmc": {
+  "tau_max": 98.62073467793375,
+  "rhat_max": 1.0263861039683893
+ },
+ "delta_posterior": {
+  "MCF7R": {
+   "median": -0.8121,
+   "lo68": -0.8882,
+   "hi68": -0.735,
+   "hpd95_lo": -0.9654,
+   "hpd95_hi": -0.6575,
+   "P_neg": 1.0,
+   "ratio_A": 0.4439
+  },
+  "T47DR": {
+   "median": -0.245,
+   "lo68": -0.3425,
+   "hi68": -0.1443,
+   "hpd95_lo": -0.4333,
+   "hpd95_hi": -0.0454,
+   "P_neg": 0.9929,
+   "ratio_A": 0.7827
+  }
+ },
+ "log10_BF10": {
+  "MCF7R": {
+   "0.05": 1.73,
+   "0.1": 6.44,
+   "0.2": 11.73,
+   "0.3": 13.19,
+   "0.5": 13.91,
+   "1.0": 14.03,
+   "2.0": 13.84,
+   "5.0": 13.47
+  },
+  "T47DR": {
+   "0.05": 0.23,
+   "0.1": 0.55,
+   "0.2": 0.76,
+   "0.3": 0.75,
+   "0.5": 0.62,
+   "1.0": 0.36,
+   "2.0": 0.07,
+   "5.0": -0.32
+  }
+ },
+ "prior_sensitivity": [
+  {
+   "prior": "nominal N(0,1)/HN(1)",
+   "line": "MCF7R",
+   "median": -0.8123,
+   "lo68": -0.8898,
+   "hi68": -0.7351,
+   "P_neg": 1.0
+  },
+  {
+   "prior": "nominal N(0,1)/HN(1)",
+   "line": "T47DR",
+   "median": -0.2466,
+   "lo68": -0.3443,
+   "hi68": -0.1484,
+   "P_neg": 0.9942
+  },
+  {
+   "prior": "wide N(0,10)/HN(10)",
+   "line": "MCF7R",
+   "median": -0.8165,
+   "lo68": -0.8931,
+   "hi68": -0.7415,
+   "P_neg": 1.0
+  },
+  {
+   "prior": "wide N(0,10)/HN(10)",
+   "line": "T47DR",
+   "median": -0.2419,
+   "lo68": -0.3416,
+   "hi68": -0.1447,
+   "P_neg": 0.9926
+  },
+  {
+   "prior": "narrow N(0,0.3)/HN(0.5)",
+   "line": "MCF7R",
+   "median": -0.7917,
+   "lo68": -0.8698,
+   "hi68": -0.7174,
+   "P_neg": 1.0
+  },
+  {
+   "prior": "narrow N(0,0.3)/HN(0.5)",
+   "line": "T47DR",
+   "median": -0.2365,
+   "lo68": -0.3324,
+   "hi68": -0.1426,
+   "P_neg": 0.9935
+  },
+  {
+   "prior": "Jeffreys",
+   "line": "MCF7R",
+   "median": -0.8129,
+   "lo68": -0.8884,
+   "hi68": -0.7371,
+   "P_neg": 1.0
+  },
+  {
+   "prior": "Jeffreys",
+   "line": "T47DR",
+   "median": -0.2465,
+   "lo68": -0.344,
+   "hi68": -0.1497,
+   "P_neg": 0.9937
+  }
+ ],
+ "ppc_pvalues": {
+  "MCF7R cito|mean": 0.4885,
+  "MCF7R cito|sd": 0.508,
+  "MCF7R cito|skewness": 0.747,
+  "MCF7R nucleo|mean": 0.508,
+  "MCF7R nucleo|sd": 0.524,
+  "MCF7R nucleo|skewness": 0.036,
+  "T47DR cito|mean": 0.506,
+  "T47DR cito|sd": 0.5245,
+  "T47DR cito|skewness": 0.4885,
+  "T47DR nucleo|mean": 0.5055,
+  "T47DR nucleo|sd": 0.5025,
+  "T47DR nucleo|skewness": 0.0
+ },
+ "waic": {
+  "gauss": -185.45664501610293,
+  "student_t": -185.87248332717792,
+  "nu_median": 39.06269038615781
+ },
+ "delta_posterior_student_t": {
+  "MCF7R": {
+   "median": -0.8226,
+   "lo68": -0.9016,
+   "hi68": -0.7439,
+   "hpd95_lo": -0.9775,
+   "hpd95_hi": -0.6637,
+   "P_neg": 1.0,
+   "ratio_A": 0.4393
+  },
+  "T47DR": {
+   "median": -0.2611,
+   "lo68": -0.3571,
+   "hi68": -0.1657,
+   "hpd95_lo": -0.4516,
+   "hpd95_hi": -0.0736,
+   "P_neg": 0.9962,
+   "ratio_A": 0.7702
+  }
+ },
+ "hierarchical": {
+  "b (common)": {
+   "median": -0.4884,
+   "lo68": -0.7688,
+   "hi68": -0.1642
+  },
+  "b+u_MCF7R": {
+   "median": -0.7995,
+   "lo68": -0.8785,
+   "hi68": -0.7185
+  },
+  "b+u_T47DR": {
+   "median": -0.2666,
+   "lo68": -0.3648,
+   "hi68": -0.1691
+  },
+  "tau_u": {
+   "median": 0.4293,
+   "lo68": 0.2569,
+   "hi68": 0.705
+  }
+ },
+ "low_statistics": {
+  "5": {
+   "coverage_credible": 0.72,
+   "coverage_profile": 0.616,
+   "length_credible": 0.8344,
+   "length_profile": 0.6383
+  },
+  "10": {
+   "coverage_credible": 0.728,
+   "coverage_profile": 0.652,
+   "length_credible": 0.5466,
+   "length_profile": 0.4715
+  },
+  "20": {
+   "coverage_credible": 0.708,
+   "coverage_profile": 0.674,
+   "length_credible": 0.3708,
+   "length_profile": 0.3434
+  },
+  "40": {
+   "coverage_credible": 0.694,
+   "coverage_profile": 0.672,
+   "length_credible": 0.26,
+   "length_profile": 0.2489
+  },
+  "80": {
+   "coverage_credible": 0.676,
+   "coverage_profile": 0.66,
+   "length_credible": 0.1819,
+   "length_profile": 0.1769
+  }
+ },
+ "comparison_with_nb03": {
+  "MCF7R": {
+   "freq_delta": -0.8139,
+   "bayes_median": -0.81213,
+   "bayes_lo68": -0.88817,
+   "bayes_hi68": -0.73495,
+   "p_wilks": 0.0,
+   "P_bayes_Delta_ge_0": 0.0,
+   "log10_BF_tau05": 13.90769,
+   "Delta_hierarchical": -0.79951
+  },
+  "T47DR": {
+   "freq_delta": -0.24678,
+   "bayes_median": -0.24499,
+   "bayes_lo68": -0.3425,
+   "bayes_hi68": -0.14431,
+   "p_wilks": 0.01072,
+   "P_bayes_Delta_ge_0": 0.00712,
+   "log10_BF_tau05": 0.6203,
+   "Delta_hierarchical": -0.26663
+  }
+ }
+}

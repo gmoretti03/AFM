@@ -1,0 +1,158 @@
+{
+ "mle_per_group": [
+  {
+   "group": "MCF7R cito",
+   "n": 55,
+   "mu": 0.0569,
+   "err_hesse": 0.0638,
+   "minos_lo": -0.0641,
+   "minos_hi": 0.0641,
+   "sigma": 0.4729,
+   "err_sigma": 0.0451,
+   "err_analytic": 0.0638,
+   "valid": true
+  },
+  {
+   "group": "MCF7R nucleo",
+   "n": 60,
+   "mu": -0.757,
+   "err_hesse": 0.0419,
+   "minos_lo": -0.0421,
+   "minos_hi": 0.0421,
+   "sigma": 0.3245,
+   "err_sigma": 0.0296,
+   "err_analytic": 0.0419,
+   "valid": true
+  },
+  {
+   "group": "T47DR cito",
+   "n": 59,
+   "mu": -0.1014,
+   "err_hesse": 0.0656,
+   "minos_lo": -0.0659,
+   "minos_hi": 0.0659,
+   "sigma": 0.5039,
+   "err_sigma": 0.0464,
+   "err_analytic": 0.0656,
+   "valid": true
+  },
+  {
+   "group": "T47DR nucleo",
+   "n": 83,
+   "mu": -0.3482,
+   "err_hesse": 0.0695,
+   "minos_lo": -0.0697,
+   "minos_hi": 0.0697,
+   "sigma": 0.6334,
+   "err_sigma": 0.0491,
+   "err_analytic": 0.0695,
+   "valid": true
+  }
+ ],
+ "nucleus_vs_cito": {
+  "MCF7R": {
+   "delta_mean": -0.8139,
+   "p_wilks": 0.0,
+   "p_welch": 0.0,
+   "p_mannwhitney": 0.0,
+   "p_perm": 5e-05,
+   "delta_median": -0.86907,
+   "boot_med_lo95": -1.08391,
+   "boot_med_hi95": -0.66016,
+   "cohen_d": -1.98893,
+   "A_ratio": 0.44312
+  },
+  "T47DR": {
+   "delta_mean": -0.24678,
+   "p_wilks": 0.01072,
+   "p_welch": 0.01144,
+   "p_mannwhitney": 0.00338,
+   "p_perm": 0.0154,
+   "delta_median": -0.26818,
+   "boot_med_lo95": -0.66502,
+   "boot_med_hi95": -0.07161,
+   "cohen_d": -0.42818,
+   "A_ratio": 0.78131
+  }
+ },
+ "toys": {
+  "MCF7R": {
+   "delta_true": -0.8139,
+   "bias": 0.0007,
+   "pull_mean": 0.0068,
+   "pull_std": 0.9761,
+   "coverage_68": 0.68,
+   "size_wilks": 0.0593,
+   "size_welch": 0.058,
+   "size_mw": 0.0547,
+   "power_wilks": 1.0,
+   "power_welch": 1.0,
+   "power_mw": 1.0
+  },
+  "T47DR": {
+   "delta_true": -0.2468,
+   "bias": 0.0006,
+   "pull_mean": 0.0058,
+   "pull_std": 0.9955,
+   "coverage_68": 0.6793,
+   "size_wilks": 0.052,
+   "size_welch": 0.0507,
+   "size_mw": 0.0427,
+   "power_wilks": 0.7267,
+   "power_welch": 0.7213,
+   "power_mw": 0.688
+  }
+ },
+ "power_80pct_delta": {
+  "MCF7R": 0.2152542372881356,
+  "T47DR": 0.2545454545454546
+ },
+ "interaction": {
+  "q": 20.572030697513867,
+  "p": 5.74290529516206e-06,
+  "b_common": -0.5939435952569032
+ },
+ "line_vs_line": {
+  "cito": {
+   "delta_T47DR_minus_MCF7R": -0.1583,
+   "err": 0.09149,
+   "p_welch": 0.08912,
+   "p_mw": 0.0817
+  },
+  "nucleo": {
+   "delta_T47DR_minus_MCF7R": 0.40882,
+   "err": 0.08117,
+   "p_welch": 0.0,
+   "p_mw": 4e-05
+  }
+ },
+ "holm": {
+  "nucleus-cito MCF7R": {
+   "p": 4.0678864722492825e-17,
+   "p_Holm": 1.627154588899713e-16
+  },
+  "nucleus-cito T47DR": {
+   "p": 0.010717645803361882,
+   "p_Holm": 0.021435291606723764
+  },
+  "T47DR-MCF7R cito": {
+   "p": 0.08911881915852529,
+   "p_Holm": 0.08911881915852529
+  },
+  "T47DR-MCF7R nucleo": {
+   "p": 1.8076304815007707e-06,
+   "p_Holm": 5.422891444502312e-06
+  }
+ },
+ "systematics": {
+  "total_in_quadrature": {
+   "MCF7R": 0.0,
+   "T47DR": 0.06752004450439694
+  },
+  "stat": {
+   "MCF7R": 0.07650149778175253,
+   "T47DR": 0.09575845197749253
+  }
+ },
+ "fit_err_rel_median": 0.008424890878132116
+}
