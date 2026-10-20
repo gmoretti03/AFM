@@ -9,3 +9,7 @@ Code_General/afm_output/
 .ipynb_checkpoints/
 __pycache__/
 *.pyc
+
+# Third-party / lab material kept locally only (slides, guides)
+Docs/*.pdf
+Docs/*.html

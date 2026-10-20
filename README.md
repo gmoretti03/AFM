@@ -28,7 +28,6 @@ Code_General/
   Curve di forza belle/                    raw .jpk-force data (NOT in the repo, see below)
   afm_output/                              cache regenerable from notebook 01 (NOT in the repo)
 Docs/report/                               the report (main.tex, biblio.bib, figures, main.pdf); `make_figures.py` rebuilds the figures
-Docs/                                      slides, QC guide, proof of concept on synthetic data
 environment.yml                            conda environment of all the code
 ```
 
