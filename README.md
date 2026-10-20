@@ -99,3 +99,8 @@ Variable: log *A* (A in nN/µm^3/2); Δ = μ_nucleus − μ_cytoplasm, e^Δ = nu
 Notebooks and comments are in English. Every notebook states at the beginning what it does and what it does **not**
 do, and ends with the output produced and the next notebook. `afm_output/` is a cache regenerable from notebook 01;
 `results/` is the source of the results quoted here.
+
+## License
+
+The code and the report are released under the MIT License (see `LICENSE`). The raw JPK force curves are
+**not** covered by this license: they belong to the laboratory that measured them and are not distributed here.
