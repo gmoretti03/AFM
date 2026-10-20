@@ -25,7 +25,7 @@ Code_General/
   afm_tools.py                             shared functions (baseline, contact, fit, bootstrap, style)
   results/                                 light results, tracked: fit tables and summary JSON
   Preliminary/                             superseded exploratory prototypes (v0–v4), reference only
-  Curve di forza belle/                    raw .jpk-force data (tracked, 78 MB)
+  Curve di forza belle/                    raw .jpk-force data (NOT in the repo, see below)
   afm_output/                              cache regenerable from notebook 01 (NOT in the repo)
 Docs/report/                               the report (main.tex, biblio.bib, figures, main.pdf); `make_figures.py` rebuilds the figures
 Docs/                                      slides, QC guide, proof of concept on synthetic data
@@ -37,15 +37,15 @@ Notebooks **03, 04 and 05 read only `results/`** (tracked) and run without the d
 
 ## Data
 
-The raw `.jpk-force` files (4 groups, 257 curves, 78 MB) are included in
+The raw `.jpk-force` files (4 groups, 257 curves) belong to the laboratory that measured them and are **not** distributed with
+the repository. To regenerate everything they must be placed in
 
 ```
 Code_General/Curve di forza belle/<group>/*.jpk-force
 ```
 
-with the groups `Petri20k_MCF7R_t48h_{cito,nucleo}_20260225` and `T47DR_t48h_{cito,nucleo}_20260318`. Running notebooks
-01 → 02 in order regenerates the cache `afm_output/` (about 2.5 GB, not tracked) and `results/`. The folder name encodes cell line,
-region, time and date.
+with the groups `Petri20k_MCF7R_t48h_{cito,nucleo}_20260225` and `T47DR_t48h_{cito,nucleo}_20260318`, then notebooks 01 → 02
+are run in order. The folder name encodes cell line, region, time and date. Notebooks 03–05 need only `results/`, which is included.
 
 ## Environment
 
