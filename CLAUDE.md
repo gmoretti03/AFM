@@ -13,7 +13,8 @@ Code_General/
     03_frequentist_analysis.ipynb            stage 3: MLE, profile likelihood, toy MC, systematics
     04_bayesian_analysis.ipynb               stage 4: MCMC, Bayes factors, hierarchical, low statistics
     05_ml_curve_analysis.ipynb               stage 5: anomaly detection, classification, mixtures
-    afm_tools.py                             functions shared by notebooks 02-05
+    06_ml_shape_extensions.ipynb             stage 6: curve-shape ML (PCA, clustering, conformal, fixed-indentation check)
+    afm_tools.py                             functions shared by notebooks 02-06
     results/                                 light results TRACKED by git (fit CSVs, summary JSON)
     Preliminary/                             superseded exploratory versions (v0..v4), reference only
     Curve di forza belle/                    raw .jpk-force data (git-ignored, not in the repo: owned by the measuring lab)
@@ -74,6 +75,12 @@ mechanical fit), `segment 1` = retract (useful for adhesion/hysteresis).
    `wrong_slope`) to measure the efficiency of Isolation Forest / robust Mahalanobis (trained on the real
    curves, no curve discarded), cytoplasm/nucleus classification with CV, permutation and transfer between
    lines, Gaussian mixtures. Output `results/05_*`.
+
+6. **06** (done): ML on the curve *shape* (60-point resampled force–indentation curves in `results/curves_resampled.csv`):
+   PCA, clustering, classification from shape vs scalar features, conformal prediction, learning curves,
+   PCA-reconstruction anomaly detector, and a model-independent check (force at fixed indentation 150/300 nm)
+   that confirms the nucleus-softer result. Note: `max_indentation` is a function of `A` at constant setpoint force,
+   so it must not be used as an independent covariate. Output `results/06_*`.
 
 Known limits to keep in the conclusions: pseudo-replication (no cell id), cell line ≡ experimental session
 (different dates), pre-selected sample ("good curves").

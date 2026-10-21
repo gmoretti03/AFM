@@ -22,6 +22,7 @@ Code_General/
   03_frequentist_analysis.ipynb            MLE, profile likelihood, toy MC, interaction, Holm, systematics
   04_bayesian_analysis.ipynb               MCMC, Bayes factors, priors, PPC, WAIC, hierarchical, low statistics
   05_ml_curve_analysis.ipynb               anomaly detection (injected defects), classification, mixtures
+  06_ml_shape_extensions.ipynb             curve-shape ML: PCA, clustering, conformal prediction, fixed-indentation check
   afm_tools.py                             shared functions (baseline, contact, fit, bootstrap, style)
   results/                                 light results, tracked: fit tables and summary JSON
   Preliminary/                             superseded exploratory prototypes (v0–v4), reference only
@@ -32,7 +33,7 @@ environment.yml                            conda environment of all the code
 ```
 
 Only notebook 01 needs the raw data; 02 needs the cache `afm_output/` produced by 01.
-Notebooks **03, 04 and 05 read only `results/`** (tracked) and run without the data.
+Notebooks **03, 04, 05 and 06 read only `results/`** (tracked) and run without the data.
 
 ## Data
 
@@ -67,6 +68,7 @@ The complete report is `Docs/report/main.pdf` (build with `tectonic main.tex`).
 | `03` | unbinned MLE (`iminuit`), profile likelihood of Δ = μ_nucleus − μ_cytoplasm, comparison with Welch/Mann–Whitney/permutation/bootstrap, toy MC (bias, pull, coverage, size, power), interaction test, Holm, systematics (Barlow) | `results/03_summary.json` |
 | `04` | posterior of Δ (`emcee`), Bayes factors versus prior width, prior sensitivity, posterior predictive check, Student-t (WAIC), hierarchical model, credible vs profile intervals at low statistics | `results/04_summary.json` |
 | `05` | synthetic curves with 5 injected defects to measure the efficiency of Isolation Forest and robust Mahalanobis, cytoplasm/nucleus classification with CV and permutation, transfer between lines, Gaussian mixtures | `results/05_summary.json`, `results/05_real_anomaly_scores.csv` |
+| `06` | curve-shape extensions: PCA of the force–indentation curve, clustering, classification from shape vs scalar features, force at fixed indentation as model-independent check, conformal prediction, learning curves, shape-based anomaly detector | `results/06_summary.json`, `results/curves_resampled.csv`, `results/06_real_shape_anomaly.csv` |
 
 ## Main results
 
@@ -83,6 +85,7 @@ Variable: log *A* (A in nN/µm^3/2); Δ = μ_nucleus − μ_cytoplasm, e^Δ = nu
 - The preprocessing systematics (9 variants) stay ≤ 0.07 in Δ, comparable to the statistical error.
 - The method is validated with toy MC: correct 68% coverage, size ≈ 5%, 80% power for |Δ| ≈ 0.22–0.25.
 - The log *A* distribution of T47DR nucleus has a tail at high values (2-component mixture, p ≈ 0.01).
+- A model-independent check (force at fixed indentation, notebook 06) confirms that the nucleus is softer in both lines, and more clearly for T47DR (p ≈ 10⁻⁴) than the fit parameter *A* does. The free contact-law exponent is ≈ 1.5, consistent with the model used.
 
 ## Limits
 
@@ -92,7 +95,7 @@ Variable: log *A* (A in nN/µm^3/2); Δ = μ_nucleus − μ_cytoplasm, e^Δ = nu
   lines cannot be separated from session effects. The nucleus–cytoplasm comparison within a line can.
 - **Pre-selected sample:** the «good curves» all pass the QC; there is no sample of real defects.
   The anomaly-detection efficiency is estimated on synthetic curves and is optimistic.
-- *A* is not the Young modulus and assumes the 3/2 exponent (sphere); the MLCT-BIO tip is pyramidal.
+- *A* is not the Young modulus and assumes the 3/2 exponent (sphere); the free exponent estimated from the data is ≈ 1.5, but the tip geometry is not in the metadata.
 
 ## Conventions
 
