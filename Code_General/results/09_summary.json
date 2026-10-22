@@ -1,0 +1,367 @@
+{
+ "calibration": {
+  "spring": {
+   "MCF7R": 0.1188285424781988,
+   "T47DR": 0.0800432639011137
+  },
+  "sensitivity_nm_per_V": {
+   "MCF7R": 10.902786667117663,
+   "T47DR": 13.996320373775632
+  },
+  "setpoint_force_nN": {
+   "MCF7R": 0.75,
+   "T47DR": 0.7499999999999992
+  },
+  "log_ratio_k": -0.3951143473632052,
+  "log_ratio_S": 0.24977605053067606,
+  "log_ratio_kS": -0.14533829683252925,
+  "fmax_median_nN": {
+   "MCF7R cito": 0.557,
+   "MCF7R nucleo": 0.607,
+   "T47DR cito": 0.548,
+   "T47DR nucleo": 0.533
+  }
+ },
+ "line_difference_vs_calibration": {
+  "cito": {
+   "delta_T47DR_minus_MCF7R": -0.1583,
+   "se": 0.0923,
+   "log_k_ratio": -0.3951,
+   "delta_if_k_equal": 0.2368,
+   "p_welch": 0.0891
+  },
+  "nucleo": {
+   "delta_T47DR_minus_MCF7R": 0.4088,
+   "se": 0.0817,
+   "log_k_ratio": -0.3951,
+   "delta_if_k_equal": 0.8039,
+   "p_welch": 0.0
+  }
+ },
+ "variance_components": {
+  "MCF7R|cito": {
+   "n": 55,
+   "bursts": 16,
+   "sd_within_burst": 0.4352,
+   "sd_between_burst": 0.2015,
+   "sd_total": 0.4773,
+   "repeatability_fraction": 0.8234
+  },
+  "MCF7R|nucleo": {
+   "n": 60,
+   "bursts": 13,
+   "sd_within_burst": 0.3345,
+   "sd_between_burst": 0.0,
+   "sd_total": 0.3273,
+   "repeatability_fraction": 1.0
+  },
+  "T47DR|cito": {
+   "n": 59,
+   "bursts": 17,
+   "sd_within_burst": 0.4619,
+   "sd_between_burst": 0.2182,
+   "sd_total": 0.5083,
+   "repeatability_fraction": 0.8175
+  },
+  "T47DR|nucleo": {
+   "n": 83,
+   "bursts": 16,
+   "sd_within_burst": 0.6063,
+   "sd_between_burst": 0.2022,
+   "sd_total": 0.6372,
+   "repeatability_fraction": 0.8999
+  }
+ },
+ "position_effect": [
+  {
+   "line": "MCF7R",
+   "region": "cito",
+   "position": 1,
+   "n": 12,
+   "mean_dev": 0.17,
+   "lo95": -0.0191,
+   "hi95": 0.3783
+  },
+  {
+   "line": "MCF7R",
+   "region": "cito",
+   "position": 2,
+   "n": 12,
+   "mean_dev": -0.2102,
+   "lo95": -0.3365,
+   "hi95": -0.0591
+  },
+  {
+   "line": "MCF7R",
+   "region": "cito",
+   "position": 3,
+   "n": 12,
+   "mean_dev": -0.0416,
+   "lo95": -0.191,
+   "hi95": 0.1135
+  },
+  {
+   "line": "MCF7R",
+   "region": "cito",
+   "position": 4,
+   "n": 8,
+   "mean_dev": 0.0421,
+   "lo95": -0.1222,
+   "hi95": 0.2329
+  },
+  {
+   "line": "MCF7R",
+   "region": "nucleo",
+   "position": 1,
+   "n": 12,
+   "mean_dev": 0.2126,
+   "lo95": 0.1033,
+   "hi95": 0.3124
+  },
+  {
+   "line": "MCF7R",
+   "region": "nucleo",
+   "position": 2,
+   "n": 12,
+   "mean_dev": -0.1169,
+   "lo95": -0.2526,
+   "hi95": 0.0018
+  },
+  {
+   "line": "MCF7R",
+   "region": "nucleo",
+   "position": 3,
+   "n": 12,
+   "mean_dev": -0.0096,
+   "lo95": -0.1246,
+   "hi95": 0.0999
+  },
+  {
+   "line": "MCF7R",
+   "region": "nucleo",
+   "position": 4,
+   "n": 10,
+   "mean_dev": -0.0755,
+   "lo95": -0.1885,
+   "hi95": 0.0538
+  },
+  {
+   "line": "T47DR",
+   "region": "cito",
+   "position": 1,
+   "n": 10,
+   "mean_dev": 0.1137,
+   "lo95": -0.0621,
+   "hi95": 0.3377
+  },
+  {
+   "line": "T47DR",
+   "region": "cito",
+   "position": 2,
+   "n": 10,
+   "mean_dev": 0.1612,
+   "lo95": -0.0336,
+   "hi95": 0.3634
+  },
+  {
+   "line": "T47DR",
+   "region": "cito",
+   "position": 3,
+   "n": 10,
+   "mean_dev": -0.152,
+   "lo95": -0.2956,
+   "hi95": -0.0026
+  },
+  {
+   "line": "T47DR",
+   "region": "cito",
+   "position": 4,
+   "n": 7,
+   "mean_dev": -0.0592,
+   "lo95": -0.229,
+   "hi95": 0.1364
+  },
+  {
+   "line": "T47DR",
+   "region": "nucleo",
+   "position": 1,
+   "n": 15,
+   "mean_dev": 0.3704,
+   "lo95": 0.1194,
+   "hi95": 0.6274
+  },
+  {
+   "line": "T47DR",
+   "region": "nucleo",
+   "position": 2,
+   "n": 15,
+   "mean_dev": -0.0508,
+   "lo95": -0.2723,
+   "hi95": 0.1497
+  },
+  {
+   "line": "T47DR",
+   "region": "nucleo",
+   "position": 3,
+   "n": 15,
+   "mean_dev": 0.0377,
+   "lo95": -0.1366,
+   "hi95": 0.2191
+  },
+  {
+   "line": "T47DR",
+   "region": "nucleo",
+   "position": 4,
+   "n": 11,
+   "mean_dev": -0.3153,
+   "lo95": -0.4379,
+   "hi95": -0.2166
+  },
+  {
+   "line": "all",
+   "region": "all",
+   "position": 1,
+   "n": 49,
+   "mean_dev": 0.2303,
+   "lo95": 0.1343,
+   "hi95": 0.337
+  },
+  {
+   "line": "all",
+   "region": "all",
+   "position": 2,
+   "n": 49,
+   "mean_dev": -0.0628,
+   "lo95": -0.1595,
+   "hi95": 0.0298
+  },
+  {
+   "line": "all",
+   "region": "all",
+   "position": 3,
+   "n": 49,
+   "mean_dev": -0.032,
+   "lo95": -0.1091,
+   "hi95": 0.0422
+  },
+  {
+   "line": "all",
+   "region": "all",
+   "position": 4,
+   "n": 36,
+   "mean_dev": -0.1195,
+   "lo95": -0.1966,
+   "hi95": -0.0496
+  }
+ ],
+ "second_minus_first": {
+  "MCF7R_cito": {
+   "n_pairs": 15,
+   "mean_second_minus_first": -0.27,
+   "sem": 0.1799,
+   "p_wilcoxon": 0.2524
+  },
+  "MCF7R_nucleo": {
+   "n_pairs": 13,
+   "mean_second_minus_first": -0.2918,
+   "sem": 0.1041,
+   "p_wilcoxon": 0.0171
+  },
+  "T47DR_cito": {
+   "n_pairs": 17,
+   "mean_second_minus_first": -0.0933,
+   "sem": 0.1569,
+   "p_wilcoxon": 0.5791
+  },
+  "T47DR_nucleo": {
+   "n_pairs": 16,
+   "mean_second_minus_first": -0.3799,
+   "sem": 0.231,
+   "p_wilcoxon": 0.1928
+  },
+  "all": {
+   "n_pairs": 61,
+   "mean_second_minus_first": -0.2542,
+   "sem": 0.0886,
+   "p_wilcoxon": 0.0126
+  }
+ },
+ "delta_burst_bias": {
+  "MCF7R|all curves": {
+   "delta": -0.8139,
+   "se": 0.0811,
+   "p": 0.0,
+   "n": 115,
+   "bursts": 29
+  },
+  "MCF7R|first curve of each burst": {
+   "delta": -0.76459,
+   "se": 0.13157,
+   "p": 0.0,
+   "n": 29,
+   "bursts": 29
+  },
+  "MCF7R|all curves + position effects": {
+   "delta": -0.8071,
+   "se": 0.08437,
+   "p": 0.0,
+   "n": 115,
+   "bursts": 29
+  },
+  "MCF7R|all curves + position + time trend": {
+   "delta": -0.97906,
+   "se": 0.17253,
+   "p": 1e-05,
+   "n": 115,
+   "bursts": 29
+  },
+  "MCF7R|first curve + time trend": {
+   "delta": -0.10848,
+   "se": 0.26537,
+   "p": 0.68603,
+   "n": 29,
+   "bursts": 29
+  },
+  "T47DR|all curves": {
+   "delta": -0.24678,
+   "se": 0.11183,
+   "p": 0.03487,
+   "n": 142,
+   "bursts": 33
+  },
+  "T47DR|first curve of each burst": {
+   "delta": -0.00508,
+   "se": 0.26219,
+   "p": 0.98467,
+   "n": 33,
+   "bursts": 33
+  },
+  "T47DR|all curves + position effects": {
+   "delta": -0.18788,
+   "se": 0.11929,
+   "p": 0.1265,
+   "n": 142,
+   "bursts": 33
+  },
+  "T47DR|all curves + position + time trend": {
+   "delta": 0.05723,
+   "se": 0.18,
+   "p": 0.75295,
+   "n": 142,
+   "bursts": 33
+  },
+  "T47DR|first curve + time trend": {
+   "delta": 0.18195,
+   "se": 0.41455,
+   "p": 0.66387,
+   "n": 33,
+   "bursts": 33
+  }
+ },
+ "mean_burst_size": {
+  "MCF7R|cito": 3.909090909090909,
+  "MCF7R|nucleo": 5.2,
+  "T47DR|cito": 4.220338983050848,
+  "T47DR|nucleo": 5.9397590361445785
+ }
+}

@@ -1,0 +1,240 @@
+{
+ "measurement_blocks": {
+  "MCF7R|cito": {
+   "n": 55,
+   "start_min": 0.0,
+   "end_min": 23.65,
+   "median_min": 12.53
+  },
+  "MCF7R|nucleo": {
+   "n": 60,
+   "start_min": 28.91,
+   "end_min": 46.75,
+   "median_min": 37.81
+  },
+  "T47DR|cito": {
+   "n": 59,
+   "start_min": 0.0,
+   "end_min": 22.7,
+   "median_min": 14.77
+  },
+  "T47DR|nucleo": {
+   "n": 83,
+   "start_min": 24.42,
+   "end_min": 46.41,
+   "median_min": 34.32
+  }
+ },
+ "time_overlap_min": {
+  "MCF7R": 0.0,
+  "T47DR": 0.0
+ },
+ "bursts_vs_threshold": {
+  "3": {
+   "MCF7R cito": 24,
+   "MCF7R nucleo": 26,
+   "T47DR cito": 27,
+   "T47DR nucleo": 25
+  },
+  "5": {
+   "MCF7R cito": 17,
+   "MCF7R nucleo": 14,
+   "T47DR cito": 20,
+   "T47DR nucleo": 18
+  },
+  "10": {
+   "MCF7R cito": 16,
+   "MCF7R nucleo": 13,
+   "T47DR cito": 17,
+   "T47DR nucleo": 16
+  },
+  "30": {
+   "MCF7R cito": 16,
+   "MCF7R nucleo": 13,
+   "T47DR cito": 17,
+   "T47DR nucleo": 16
+  },
+  "60": {
+   "MCF7R cito": 16,
+   "MCF7R nucleo": 13,
+   "T47DR cito": 16,
+   "T47DR nucleo": 15
+  }
+ },
+ "bursts": {
+  "MCF7R|cito": {
+   "curves": 55,
+   "bursts": 16,
+   "curves_per_burst": 3.44
+  },
+  "MCF7R|nucleo": {
+   "curves": 60,
+   "bursts": 13,
+   "curves_per_burst": 4.62
+  },
+  "T47DR|cito": {
+   "curves": 59,
+   "bursts": 17,
+   "curves_per_burst": 3.47
+  },
+  "T47DR|nucleo": {
+   "curves": 83,
+   "bursts": 16,
+   "curves_per_burst": 5.19
+  }
+ },
+ "icc": {
+  "MCF7R|cito": {
+   "n": 55,
+   "bursts": 16,
+   "mean_burst_size": 3.438,
+   "ICC": 0.177,
+   "ICC_lo": 0.065,
+   "ICC_hi": 0.253,
+   "design_effect": 1.43,
+   "n_effective": 38.45
+  },
+  "MCF7R|nucleo": {
+   "n": 60,
+   "bursts": 13,
+   "mean_burst_size": 4.615,
+   "ICC": -0.048,
+   "ICC_lo": -0.134,
+   "ICC_hi": 0.041,
+   "design_effect": 0.825,
+   "n_effective": 72.738
+  },
+  "T47DR|cito": {
+   "n": 59,
+   "bursts": 17,
+   "mean_burst_size": 3.471,
+   "ICC": 0.182,
+   "ICC_lo": 0.037,
+   "ICC_hi": 0.284,
+   "design_effect": 1.451,
+   "n_effective": 40.666
+  },
+  "T47DR|nucleo": {
+   "n": 83,
+   "bursts": 16,
+   "mean_burst_size": 5.188,
+   "ICC": 0.1,
+   "ICC_lo": 0.008,
+   "ICC_hi": 0.18,
+   "design_effect": 1.419,
+   "n_effective": 58.481
+  }
+ },
+ "burst_level_comparison": {
+  "MCF7R": {
+   "delta": -0.8139,
+   "p_naive_welch": 0.0,
+   "delta_burst_means": -0.84322,
+   "p_welch_bursts": 0.0,
+   "boot_lo95": -0.96926,
+   "boot_hi95": -0.66032,
+   "p_cluster_perm": 0.0002,
+   "ols_delta": -0.8139,
+   "ols_se": 0.0811,
+   "p_cluster_ols": 0.0,
+   "n_bursts": 29,
+   "naive_se": 0.07699,
+   "se_inflation": 1.05338
+  },
+  "T47DR": {
+   "delta": -0.24678,
+   "p_naive_welch": 0.01144,
+   "delta_burst_means": -0.21733,
+   "p_welch_bursts": 0.09525,
+   "boot_lo95": -0.46463,
+   "boot_hi95": -0.03012,
+   "p_cluster_perm": 0.04919,
+   "ols_delta": -0.24678,
+   "ols_se": 0.11183,
+   "p_cluster_ols": 0.03487,
+   "n_bursts": 33,
+   "naive_se": 0.09628,
+   "se_inflation": 1.16151
+  }
+ },
+ "drift": {
+  "MCF7R": {
+   "slope_cito_per_10min": 0.0448,
+   "slope_nucleo_per_10min": 0.0865,
+   "spearman_cito": 0.0251,
+   "spearman_nucleo": 0.231,
+   "common_slope_per_10min": 0.0632,
+   "common_slope_se": 0.0601,
+   "block_gap_min": 25.2994,
+   "drift_over_gap": 0.1598,
+   "delta_observed": -0.8139,
+   "delta_at_common_time": -0.9737,
+   "delta_at_common_time_se": 0.1697,
+   "p_delta_at_common_time": 0.0
+  },
+  "T47DR": {
+   "slope_cito_per_10min": -0.2249,
+   "slope_nucleo_per_10min": -0.0584,
+   "spearman_cito": -0.3221,
+   "spearman_nucleo": -0.1492,
+   "common_slope_per_10min": -0.1331,
+   "common_slope_se": 0.0711,
+   "block_gap_min": 22.1885,
+   "drift_over_gap": -0.2954,
+   "delta_observed": -0.2468,
+   "delta_at_common_time": 0.0486,
+   "delta_at_common_time_se": 0.1745,
+   "p_delta_at_common_time": 0.7826
+  }
+ },
+ "adjusted_for_time": {
+  "MCF7R|log A": {
+   "observed": -0.8139,
+   "slope_per_10min": 0.06317,
+   "slope_p": 0.30266,
+   "at_common_time": -0.97371,
+   "se": 0.16965,
+   "p": 0.0
+  },
+  "MCF7R|log F(300 nm)": {
+   "observed": -0.76387,
+   "slope_per_10min": 0.08509,
+   "slope_p": 0.14989,
+   "at_common_time": -0.97916,
+   "se": 0.15355,
+   "p": 0.0
+  },
+  "MCF7R|free exponent": {
+   "observed": 0.00761,
+   "slope_per_10min": -0.02137,
+   "slope_p": 0.01421,
+   "at_common_time": 0.06169,
+   "se": 0.02167,
+   "p": 0.0085
+  },
+  "T47DR|log A": {
+   "observed": -0.24678,
+   "slope_per_10min": -0.13312,
+   "slope_p": 0.07101,
+   "at_common_time": 0.04859,
+   "se": 0.17454,
+   "p": 0.78264
+  },
+  "T47DR|log F(300 nm)": {
+   "observed": -0.3506,
+   "slope_per_10min": -0.16267,
+   "slope_p": 0.01421,
+   "at_common_time": 0.00717,
+   "se": 0.16428,
+   "p": 0.96549
+  },
+  "T47DR|free exponent": {
+   "observed": 0.06987,
+   "slope_per_10min": 0.00473,
+   "slope_p": 0.52268,
+   "at_common_time": 0.05937,
+   "se": 0.0172,
+   "p": 0.00168
+  }
+ }
+}

@@ -14,7 +14,11 @@ Code_General/
     04_bayesian_analysis.ipynb               stage 4: MCMC, Bayes factors, hierarchical, low statistics
     05_ml_curve_analysis.ipynb               stage 5: anomaly detection, classification, mixtures
     06_ml_shape_extensions.ipynb             stage 6: curve-shape ML (PCA, clustering, conformal, fixed-indentation check)
-    afm_tools.py                             functions shared by notebooks 02-06
+    07_depth_resolved_stiffness.ipynb        stage 7: stiffness vs depth, fixed-force check, T47DR shape/exponent signal
+    08_time_and_clustering_checks.ipynb      stage 8: acquisition order, bursts (pseudo-replication), temporal drift
+    09_calibration_and_repeatability.ipynb   stage 9: calibration per session, repeatability, preconditioning
+    10_unified_bayesian_model.ipynb          stage 10: one hierarchical model (region, drift, position, burst)
+    afm_tools.py                             functions shared by notebooks 02-10
     results/                                 light results TRACKED by git (fit CSVs, summary JSON)
     Preliminary/                             superseded exploratory versions (v0..v4), reference only
     Curve di forza belle/                    raw .jpk-force data (git-ignored, not in the repo: owned by the measuring lab)
@@ -82,7 +86,23 @@ mechanical fit), `segment 1` = retract (useful for adhesion/hysteresis).
    that confirms the nucleus-softer result. Note: `max_indentation` is a function of `A` at constant setpoint force,
    so it must not be used as an independent covariate. Output `results/06_*`.
 
-Known limits to keep in the conclusions: pseudo-replication (no cell id), cell line ≡ experimental session
+7. **07** (done): depth-resolved profiles (`results/force_indentation_profiles.csv`): nucleus−cytoplasm Δ vs indentation,
+   fixed-force check, effective stiffness vs depth; the T47DR shape signal is stable under contact-point shifts but is
+   entirely the local exponent (nucleus 1.50 vs cytoplasm 1.43). Output `results/07_summary.json`.
+
+8. **08** (done): uses the JPK timestamps (`results/acquisition_times.csv`). Cytoplasm and nucleus were measured in separate,
+   non-overlapping time blocks in both sessions (region ≡ time); curves come in bursts of 3-5 at the same spot (ICC 0-0.18,
+   design effect ~1.4). MCF7R result robust; T47DR stiffness difference is compatible with a time drift (Δ at common time 0.05±0.17),
+   while the T47DR exponent difference survives. Output `results/08_summary.json`.
+
+9. **09** (done): calibration metadata per session (`results/session_calibration.csv`): same cantilever, spring constant differs by 40%
+   between sessions → line comparisons not interpretable; within-spot repeatability sd 0.33-0.61; preconditioning (first curve stiffer).
+   First-curve-only Δ: MCF7R −0.77±0.13, T47DR −0.01±0.26. Output `results/09_summary.json`.
+
+10. **10** (done): single Bayesian model (region + drift + position + burst effect). MCF7R β≈−0.8/−0.9 robust; T47DR stiffness β depends on
+   the drift prior (−0.2 without drift, +0.03 with it); T47DR exponent excess robust. Output `results/10_summary.json`.
+
+Known limits to keep in the conclusions: region ≡ time block within each session, pseudo-replication (no cell id; bursts used as proxy), cell line ≡ experimental session
 (different dates), pre-selected sample ("good curves").
 
 `Preliminary/` holds the superseded exploratory notebooks: useful as a reference for the logic already
